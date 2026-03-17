@@ -87,7 +87,7 @@ params:
 
 author:
     name = "Orim Dominic"
-    email = ""
+    email = "orim@email.com"
 
 outputs:
     home:
