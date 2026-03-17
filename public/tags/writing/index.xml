@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Writing on Orim Dominic</title>
+    <link>http://localhost:1313/tags/writing/</link>
+    <description>Recent content in Writing on Orim Dominic</description>
+    <image>
+      <url>http://localhost:1313/115</url>
+      <link>http://localhost:1313/115</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Jan 2021 08:32:05 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/writing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why Start a Blog?</title>
+      <link>http://localhost:1313/posts/why-start-a-blog/</link>
+      <pubDate>Fri, 01 Jan 2021 08:32:05 +0100</pubDate>
+      
+      <guid>http://localhost:1313/posts/why-start-a-blog/</guid>
+      <description>There&amp;rsquo;s power in asking why. When you ask why, you can unearth the underlying purpose or reason for anything. The answer(s) to why also clarifies purpose, giving you solid foundations for decision-making.
+Why have I decided to start a blog?
+To improve my technical communication skills. To help others solve problems easily. To help me in the future. To Improve my Technical Communication Skills I live among people, and to get my thoughts across to them, I have to communicate.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mongoose-Paginate on Orim Dominic</title>
+    <link>http://localhost:1313/tags/mongoose-paginate/</link>
+    <description>Recent content in Mongoose-Paginate on Orim Dominic</description>
+    <image>
+      <url>http://localhost:1313/115</url>
+      <link>http://localhost:1313/115</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 19 Sep 2023 19:11:35 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/mongoose-paginate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Set Custom Types for docs items in mongoose-paginate-v2</title>
+      <link>http://localhost:1313/posts/set-custom-types-for-docs-items-in-mongoose-paginate-v2/</link>
+      <pubDate>Tue, 19 Sep 2023 19:11:35 +0100</pubDate>
+      
+      <guid>http://localhost:1313/posts/set-custom-types-for-docs-items-in-mongoose-paginate-v2/</guid>
+      <description>With mongoose-paginate-v2 you can now set the type of the items in &amp;#39;docs&amp;#39; array</description>
+    </item>
+    
+  </channel>
+</rss>

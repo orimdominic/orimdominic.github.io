@@ -1,0 +1,103 @@
+baseURL: "https://orimdominic.github.io/"
+languageCode: "en-us"
+title: "Orim Dominic"
+theme: "PaperMod"
+
+pagination:
+    paperSize: 10
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: true
+enableEmoji: true # https://www.webfx.com/tools/emoji-cheat-sheet/
+
+googleAnalytics: G-GL67PJE50H
+
+minify:
+    disableXML: true
+    minifyOutput: true
+    disableJSON: true
+
+params:
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    title: "Orim Dominic"
+    description: "Sharing insights from my experience in software engineering"
+    author: "Orim Dominic Adah"
+    keywords: [javascript, golang, software engineering, programming]
+    images: sudocodes-home-image.png
+    ShowReadingTime: true
+    ShowShareButtons: true
+    ShowCodeCopyButtons: true
+    ShowPostNavLinks: true
+    # comments: false
+    defaultTheme: dark
+    disableThemeToggle: false
+    disableSpecial1stPost: false
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+    cover:
+      responsiveImages: true
+      linkFullImages: true
+      hiddenInList: false
+
+    assets:
+        favicon: "/favicon.ico"
+        favicon16x16:  "/favicon-16x16.png"
+        favicon32x32:  "/favicon-32x32.png"
+        apple_touch_icon: "/apple-touch-icon.png"
+        # safari_pinned_tab: "<link / abs url>"
+        disableFingerprinting: true
+    profileMode:
+        enabled: true # needs to be explicitly set
+        title: Orim Dominic
+        # imageUrl: '/apple-touch-icon.png'
+        imageTitle: 'site image'
+        buttons:
+            - name: Articles
+              url: posts
+            - name: Projects
+              url: projects
+        subtitle: "A repository of my experiences, experiments and musings in software engineering"
+ # home-info mode
+    # homeInfoParams:
+    #     Title: "Hi there \U0001F44B"
+    #     Content: Welcome to my blog
+
+    socialIcons:
+        - name: github
+          url: "https://github.com/orimdominic"
+        - name: linkedin
+          url: "https://linkedin.com/in/orimdominicadah"
+
+    # fuseOpts:
+    #     isCaseSensitive: false
+    #     shouldSort: true
+    #     location: 0
+    #     distance: 1000
+    #     threshold: 0.4
+    #     minMatchCharLength: 0
+    #     keys: ["title", "permalink", "summary", "content"]
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+
+menu:
+    main:
+        - identifier: search
+          name: search
+          url: /search/
+          weight: 1
+        - identifier: about
+          name: about
+          url: /about/
+          weight: 2
