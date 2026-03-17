@@ -42,11 +42,11 @@ Do what you know how to do best - write code, write tests and have fun!.
 
 Well-written automated tests help keep contributions locked to specification and notify if a specification is broken.
 
-{{< twitter user="orimdominic_" id="1759179956251238890" >}}
+{{< x user="orimdominic_" id="1759179956251238890" >}}
 
 In a codebase with many contributors, it is normal and expected that code will be changed by those who did not author it. Automated tests are allies as well as guardrails. They help prevent too many cooks from *spoiling the broth*.
 
-{{< twitter user="orimdominic_" id="1558432897421418498" >}}
+{{< x user="orimdominic_" id="1558432897421418498" >}}
 
 If a code change breaks something, your automated allies will tell you. They will not only tell you that something is broken, they will also tell you exactly what got broken and where it is broken. Isn't that amazing?
 
@@ -79,8 +79,3 @@ When I build a product for use and I do not write documentation, I am tying myse
 I have a hunch that developers do not write tests because it is hard, and it is hard because the code they wrote is hard to test. The good part is, writing testable code is a sign of good design. You can read the [Design With Testing in Mind](https://6figuredev.com/testing/design-with-testing-in-mind/) article by Clayton Hunt to see what I mean.
 
 Writing documentation improves your communication skills as a developer and as a person. In writing documentation, you invest your resources in trying to see things from the point of view of your listener/reader and you construct what you have to say so that they can understand it properly. If you are well-understood when you communicate, you will feel fulfilled.
-
-
-
-
-

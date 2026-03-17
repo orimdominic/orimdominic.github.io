@@ -85,6 +85,10 @@ params:
     #     minMatchCharLength: 0
     #     keys: ["title", "permalink", "summary", "content"]
 
+author:
+  name = "Orim Dominic"
+  email = ""
+
 outputs:
     home:
         - HTML
