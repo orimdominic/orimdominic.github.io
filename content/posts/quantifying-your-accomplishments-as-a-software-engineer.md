@@ -2,7 +2,7 @@
 title: "Quantifying Your Accomplishments as a Software Engineer"
 date: 2024-07-02T07:06:58+01:00
 author: "Orim Dominic Adah"
-description: "" # TODO include desc
+description: "How to measure and talk about what you've achieved as a software engineer" 
 draft: false
 showToc: true
 TocOpen: false

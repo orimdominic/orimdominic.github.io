@@ -2,7 +2,7 @@
 title: "A Guide to Interfaces in Programming for Beginners"
 date: 2023-11-25T10:13:11+01:00
 author: "Orim Dominic Adah"
-description: "This aim of this article it to help beginners in programming to understand what an interface is using a USB port as an analogy"
+description: "To help beginners visualise what an interface is using a USB port as an analogy"
 draft: false
 showToc: true
 TocOpen: false

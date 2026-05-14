@@ -2,9 +2,7 @@
 title: "Dependency Injection in JavaScript"
 date: 2023-02-22T05:36:45+01:00
 author: "Orim Dominic Adah"
-description:
-  "Dependency Injection helps make our applications less tightly-coupled and
-  easily testable. How is it done in JavaScript"
+description:  "Dependency Injection reduces tight-coupling and akes test easy to write"
 draft: false
 showToc: true
 TocOpen: false

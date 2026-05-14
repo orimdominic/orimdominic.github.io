@@ -1,5 +1,5 @@
 ---
-title: "Guest Authorship"
+title: "📌 Guest Authorships"
 date: 2026-05-03T11:13:04+01:00
 author: "Orim Dominic Adah"
 description: "A reference to articles I've published on other blogs"
@@ -10,7 +10,8 @@ comments: false
 hidemeta: false
 disableShare: false
 searchHidden: false
-tags: ["freeCodeCamp","gigson blog", "guest authorship"]
+weight: 1
+tags: ["freeCodeCamp", "gigson blog", "guest authorship"]
 ---
 
 I have not been writing here for the past few months, but I have been publishing technical articles on other blogs as a guest author. In this post, I will reference other blogs where I've been a guest author and some of my articles published there.
