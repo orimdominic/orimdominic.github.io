@@ -13,7 +13,7 @@ searchHidden: false
 tags: ["mongodb", "docker"]
 ---
 
-Some of the applications I build use MongoDB. [MongoDB community server](https://www.mongodb.com/try/download/community) is the most common MongoDB server for local development but it is not exactly the same as MongoDB Atlas which used in production. The community server lacks two features:
+Some of the applications I build use MongoDB. [MongoDB community server](https://www.mongodb.com/try/download/community) is the most common MongoDB server for local development but it is not exactly the same as MongoDB Atlas which is used in production. The community server lacks two features:
 
 - Replica sets
 - Vector search
