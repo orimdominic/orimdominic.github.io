@@ -31,7 +31,7 @@ I built my note-taking application using Java, Firebase. Users use the applicati
 
 You can [download it here](https://drive.google.com/file/d/1D1_wB5XIqK83zWLe09jSjBolhFwN7PcN/view?usp=sharing).
 
-![Notes list](/projects/images/notes-app-list.png)
+![Notes list](/projects/assets/notes-app-list.png)
 
 ## What I learnt
 

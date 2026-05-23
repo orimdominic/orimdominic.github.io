@@ -12,7 +12,7 @@ disableShare: false
 searchHidden: false
 tags: ["twitter bot", "project"]
 cover:
-  image: "../projects/images/par-twitter-header-image.png"
+  image: "../projects/assets/par-twitter-header-image.png"
   alt: "PickAtRandom Twitter bot"
   caption: "Pick random Twitter users with ease"
   relative: false
