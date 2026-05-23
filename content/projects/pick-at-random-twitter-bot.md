@@ -66,4 +66,4 @@ Lastly, Twitter responds with only about 99 user handles for requests to get a l
 
 I have to thank @mykeels here. He was supportive, watching out for tweets from @PickAtRandom and being accessible for questions and feeback. [@bolaji\_](https://twitter.com/bolaji_), the creator of [@anniemusicapp](https://mobile.twitter.com/anniemusicapp) was also cheering me on. They got @PickAtRandom its first set of users. Awesome folks!
 
- <!-- Things to add: - Other options (follow, like, retweet); 99, highest/lowest number of like tweets/retweets or comments; prevent non owner of tweet from using @pickatrandom, use the other product -->
+<!--Things to add: - Other options (follow, like, retweet); 99, highest/lowest number of like tweets/retweets or comments; prevent non owner of tweet from using @pickatrandom, use the other product-->

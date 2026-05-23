@@ -1,0 +1,14 @@
+<style>
+.video-center {
+  text-align: center;
+}
+.br-2 {
+  border-radius: 4px;
+}
+</style>
+<div class="video-center">
+  <video class="br-2" width="{{ .Get "width" | default "100%" }}" controls>
+    <source src="{{ .Get "src" }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
