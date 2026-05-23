@@ -3,7 +3,7 @@ title: "Push Notifications in Go: Notify Users After Long RAG Processing"
 date: 2026-05-22T18:12:51+01:00
 author: "Orim Dominic Adah"
 description: "A demo project in which I use push notifications in Go to notify a client after their document embedding process is completed"
-draft: true
+draft: false
 showToc: true
 TocOpen: false
 comments: false
