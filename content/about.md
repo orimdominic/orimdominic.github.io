@@ -29,7 +29,7 @@ My career in professional web development started in 2021 as a backend developer
 
 Aside from what I do at work, I
 - mentor ([on Exercism](https://exercism.org/profiles/orimdominic))
-- contribute to open source 
+- contribute to open source
 - write technical articles ([view my writing portfolio](https://lavender-trader-ebe.notion.site/ORIM-Dominic-Technical-Writer-1694bd6d106e80f788b8f04559ff0710))
 
 
@@ -37,6 +37,7 @@ Aside from what I do at work, I
 
 Although I write JavaScript and Golang, I don't see myself as a [language] developer. My focus is on using my skills, soft and hard, **to provide business value**. That's what matters most - business value.
 
+I share my programming experience here and also on my [YouTube channel](https://www.youtube.com/@DominicOrim). You should check it out.
 
 ## Projects
 
