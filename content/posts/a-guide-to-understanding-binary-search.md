@@ -15,22 +15,22 @@ tags: ["binary search", "algorithms", "golang", "javascript"]
 
 In working with collections (lists, queues, maps) of data, you usually have to perform one or more of the following operations on the collection: accessing, searching, appending, inserting, replacing/swapping, deleting and sorting.
 
-Binary search is one of the most popular algorithms for searching for a number within a sorted list of numbers. It has a time complexity of *O(log N)* which means that its ability to find a number in a sorted list is minimally affected by the length of numbers in the list.
+Binary search is one of the most popular algorithms for searching for a number within a sorted list of numbers. It has a time complexity of *O(log N)* which means that its ability to find a number in a sorted list is minimally affected by the length of numbers in the list. Why? For each turn, the length of the list to search in reduces by half, so there's less work to do.
 
 ## Binary Search - Analogy
 
 The binary search algorithm is similar to how you search through a numbered book to get to a page. First, you open up to a random page. If the page number is greater than that of the page you are looking for, you search leftwards, else, you search to the right. You repeat this procedure until you find the page with the number you are looking for.
 
-Two things stand out
+Two things stand out:
 1. the page numbers are **sorted** so you can know to search left or search right
 2. the number of pages is **finite** (has a definite end)
 
 In binary search, you ask the computer to do something similar:
 1. start from a midpoint in the collection
 2. evaluate if the midpoint number is greater than or less than the number being searched for
-3. search forward or backward based on the result of the evaluation until the number is found
+3. search forward or backward based on the result of the evaluation until the number is (not) found
 
-The algorithm is popularly called **divide and conquer** because each time it does not find what it is searching for in a comparison, it focuses on one half of the collection, ignoring the other half; dividing the items by half after each evaluation.
+The algorithm is popularly called **divide and conquer** because for each turn where it does not find what it is searching for in a comparison, it focuses on one half of the collection, ignoring the other half; dividing the items by half after each evaluation.
 
 ## Binary Search - Pseudocode
 
@@ -148,7 +148,7 @@ Here's a JavaScript implementation of binary search
 ```js
 /**
 * @param {number[]} list the list of numbers sorted in ascending order
-* @param {number} x the number for the index we are searching for
+* @param {number} x the number whose index we are searching for
 */
 function findIndex(list, x) {
   if (list.length == 1 && list[0] == x) return 0
@@ -161,16 +161,16 @@ function findIndex(list, x) {
     midIndex = Math.floor((lowerIndex + upperIndex)/2)
     midValue = list[midIndex]
 
-    if (midValue == x) {
+    if (x == midValue) {
       return midIndex
     }
 
-    if (midValue > x) {
-      lowerIndex = midIndex + 1
+    if (x < midValue) {
+      upperIndex = midIndex - 1
     }
 
-    if (midValue < x) {
-      upperIndex = midIndex - 1
+    if (x > midValue) {
+      lowerIndex = midIndex + 1
     }
   }
 
@@ -203,12 +203,12 @@ func findIndex(list []int, x int) int {
       return midIndex
     }
 
-    if midValue > x {
-      lowerIndex = midValue + 1
+    if (x < midValue) {
+      upperIndex = midIndex - 1
     }
 
-    if midValue < x {
-      upperIndex = midValue - 1
+    if (x > midValue) {
+      lowerIndex = midIndex + 1
     }
   }
 
