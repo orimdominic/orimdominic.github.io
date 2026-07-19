@@ -15,7 +15,7 @@ tags: ["binary search", "algorithms", "golang", "javascript"]
 
 In working with collections (lists, queues, maps) of data, you usually have to perform one or more of the following operations on the collection: accessing, searching, appending, inserting, replacing/swapping, deleting and sorting.
 
-Binary search is one of the most popular algorithms for searching for a number within a sorted list of numbers. It has a time complexity of *O(log N)* which means that its ability to find a number in a sorted list is minimally affected by the length of numbers in the list. Why? For each turn, the length of the list to search in reduces by half, so there's less work to do.
+Binary search is one of the most popular algorithms for searching for a number within a sorted list of numbers. It has a time complexity of *O(log N)*, which means that its ability to find a number in a sorted list is minimally affected by the length of numbers in the list - for each turn, the length of the list to search in reduces by half, so there's less work to do.
 
 ## Binary Search - Analogy
 
@@ -35,37 +35,38 @@ The algorithm is popularly called **divide and conquer** because for each turn w
 ## Binary Search - Pseudocode
 
 Situations requiring binary search are usually worded in the following manner:
-> Given a list of numbers **sorted** in ascending order, **find** out if the number *x* exists in the list. If it does, return the index where it was found, otherwise, return -1.
+> Given a list of numbers **sorted** in ascending order, **find** out if the number *target* exists in the list. If it does, return the index where it was found, otherwise, return -1.
 
 How do you go about solving this with code?
 
 ### 1. Handle Edge Cases
-It is possible that the list contains only one number. If it does, it would be efficient to exit early. To do that, you check if that single number is the number you are looking for *(x)*. If it is, you return the index of the number *(usually 0)*, else, you return *-1*.
+It is possible that the list contains no numbers one number. In that case, it will be efficient to exit early. To do that, you check if the length of the list is zero and exit with a return value of -1.
 
 ```js
-if (list.length == 1 and list[0] != x) return -1
-if (list.length == 1 and list[0] == x) return 0
+if (list.length == 0) return -1
 ```
+
+> The constraints of the question may highlight that the list will always have at least one number. If that is the case, this stage is not necessary and can be omitted.
 
 ### 2. Establish Boundaries
-Having handled that edge case, you can move on to searching through lists that have more than one number. To do this, you want to first establish the bounds within which you can search.
+At this point, you want to establish the bounds within which you can search.
 
- You cannot go beyond the last item in the list found at `list[list.length - 1]` and the first item in the list found at `list[0]`. With that, you have your upper index bound and your lower index bound respectively.
+ You cannot go beyond the last item in the list found at `list[list.length - 1]`, and the first item in the list found at `list[0]`. With that, you have your upper bound index (`ubi`) and your lower bound index (`lbi`) respectively.
 
 ```js
-lowerIndex = 0;
-upperIndex = list.length - 1;
+lbi = 0;
+ubi = list.length - 1;
 ```
 
-### 3. Search
+### 3. Search Iteratively
 
-You begin to search through the list the way you would search for a page in a book. In searching through a book, you first open to a random page. In binary search, you access the item at the middle of the list first, not just a random number in the list. How do you get to the middle of the list?
+You begin to search through the list the way you would search for a page in a book. When you search through a book for a page, you first open to a random page. In binary search, this means accessing the item at the middle of the list first, not just a random number in the list as you will do in real life. How do you get to the middle of the list?
 
 ```
-midIndex = round_down((upperIndex + lowerIndex) / 2)
+mi = round_down((upperIndex + lowerIndex) / 2)
 ```
 
-The sum of the boundaries divided by two and then rounded down is the middle index of the list. It is rounded down so that the upper bound is not overstepped. Overstepping the upper bound can lead to accessing an index higher than the maximum index of the list, and that would cause an *index out of range error*.
+The sum of the boundaries divided by two and then rounded down is the middle index (`mi`) of the list. It is rounded down so that the upper bound is not overstepped. Overstepping the upper bound can lead to accessing an index higher than the maximum index of the list, and that would cause an *index out of range error*.
 
 The operations repeated in this search start from accessing a page. You would need a loop to perform operations repeatedly.
 
@@ -73,70 +74,65 @@ The operations repeated in this search start from accessing a page. You would ne
 ...
 while (condition to terminate the loop) {
   // accessing a middle index value
-  midIndex = round_down((upperIndex + lowerIndex)/2)
-  midVal = list[midIndex]
+  mi = round_down((ubi + lbi)/2)
+  cVal = list[mi]
 }
 ```
 
 ### 4. Compare Values
 
-`midVal` gives you the number at `midIndex`. With `midVal`, you can determine if you should search towards the left of the list, towards the right or exit because *x* has been found.
+`cVal` is the current value of the number at `mi`. With `cVal`, you can determine if you should search towards the left of the list, towards the right or exit because `target` has (not) been found.
 
 ```js
 ...
 while (condition to terminate the loop) {
-  midIndex = round_down((upper + lower)/2)
-  midVal = list[midIndex]
+  mi = round_down((upper + lower)/2)
+  cVal = list[mi]
 
-  if (x == midVal) {
-    return midIndex // (1)
+  if (target == cVal) {
+    return mi // (1)
   }
 
-  if (x > midVal) {
-    lower = midIndex + 1 // (2)
+  if (target > cVal) {
+    lbi = mi + 1 // (2)
   }
 
-  if (x < midVal) {
-    upper = midIndex - 1 // (3)
+  if (target < cVal) {
+    ubi = mi - 1 // (3)
   }
 }
 ```
 
-If `x` is `midVal`, you have found the number. You can return the index(1).
+The trick here is to compare `target` with `cVal` and let the direction of the comparison operators (`<`, `>` and `=`) tell you what to do.
 
-If `x` is greater than `midVal`, then the number you are looking for is towards the
-right. You have to increase the next value of `round_down((upperIndex + lowerIndex)/2)` (also known as `midIndex`) in the next loop so that it can point further to the right.
+If `target` is equal to `cVal`, you have found the number. You can return the index (1).
 
-In trying to achieve this, you cannot increase `upperIndex` because it is the
-upper bound and it should not exceed the maximum list index. You can
-increase lower though. You set it to `midIndex + 1` because the number you are
-looking for is beyond `midIndex`. (2)
+If `target` is greater than `cVal`, then the number you are looking for is towards the right of `mi` (and the comparison operator guides you by pointing towards the right).
 
-If `x` is less than `midVal`, then the number you are looking for is on the left of
-the list. You have to reduce the next value of `midIndex` (in the next loop) so that it can point leftwards.
+To move to the right, you increase the lower bound index (`lbi`) by setting it to the index just right after the middle index; that is - `mi + 1`, because you have ascertained from the first comparison that `target` is not equal to the current `cVal` and from the second comparison, that it is lower than `cVal`.
 
-In doing this, either `lowerIndex` or `upperIndex` must be reduced. You cannot reduce `lowerIndex` because you may end up reducing it to below 0 and then have an *index out of range error*. What you do is reduce `upperIndex` by 1 instead. (3)
+If `target` is less than `cVal`, then the number you are looking for is towards the left of `mi`; every number from `mi` to `hbi` doesn't count anymore. The new `hbi` will be the index just before `mi`, which is `mi -1`.
 
 ### 5. Exit the loop
 
-For each run of the loop where you did not find *x*, it is either `lowerIndex` is increased, tending towards `upperIndex`, or the `upperIndex` is reduced, tending towards `lowerIndex`. The list has been fully searched through when `lowerIndex` becomes higher than `upperIndex`. The condition to keep running the loop is then `while (lowerIndex <= upperIndex)`.
+For each run of the loop where you did not find *target*, it is either `lbi` is increased, tending towards `ubi`, or the `ubi` is reduced, tending towards `lbi`. The list has been fully searched through when `lbi` becomes higher than `ubi`. The condition to keep running the loop is then `while (lbi <= ubi)`.
 
 
 ```js
-while (lower <= upper) {
-  midIndex = round_down((upperIndex + lowerIndex)/2)
-  midVal = list[midIndex]
+while (lbi <= ubi) {
+  mi = round_down((ubi + lbi)/2)
+  cVal = list[mi]
 
-  if (x == midVal) {
-    return midIndex // (1)
+  if (target == cVal) {
+    return mi // (1)
   }
 
-  if (x > midVal) {
-    lower = midIndex + 1 // (2)
+  if (target > cVal) {
+    lbi = mi + 1 // (2)
   }
 
-  if (x < midVal) {
-    upper = midIndex - 1 // (3)
+  if (target < cVal) {
+    ubi = mi - 1 // (3)
   }
 }
 ```
@@ -150,27 +146,26 @@ Here's a JavaScript implementation of binary search
 * @param {number[]} list the list of numbers sorted in ascending order
 * @param {number} x the number whose index we are searching for
 */
-function findIndex(list, x) {
-  if (list.length == 1 && list[0] == x) return 0
-  if (list.length == 1 && list[0] != x) return -1
+function findIndex(list, target) {
+  if(list.length == 0) return -1
 
-  let lowerIndex = 0
-  let upperIndex = list.length - 1
+  let lbi = 0
+  let ubi = list.length - 1
 
-  while(lowerIndex <= upperIndex) {
-    midIndex = Math.floor((lowerIndex + upperIndex)/2)
-    midValue = list[midIndex]
+  while(lbi <= ubi) {
+    const mi = Math.floor((lbi + ubi)/2)
+    const cVal = list[mi]
 
-    if (x == midValue) {
-      return midIndex
+    if (target == cVal) {
+      return mi
     }
 
-    if (x < midValue) {
-      upperIndex = midIndex - 1
+    if (target < cVal) {
+      ubi = mi - 1
     }
 
-    if (x > midValue) {
-      lowerIndex = midIndex + 1
+    if (target > cVal) {
+      lbi = mi + 1
     }
   }
 
@@ -183,32 +178,32 @@ function findIndex(list, x) {
 Here's an implementation of binary search in Golang
 
 ```go
-func findIndex(list []int, x int) int {
+func findIndex(list []int, target int) int {
   if len(list) == 0 && list[0] == x {
     return 0
   }
 
-  if len(list) == 0 && list[0] != x {
+  if len(list) == 0 && list[0] != target {
     return - 1
   }
 
-  lowerIndex := 0
-  upperIndex := len(list) - 1
+  lbi := 0
+  ubi := len(list) - 1
 
-  for lowerIndex <= upperIndex {
-    midIndex := (lowerIndex + upperIndex)/2
-    midValue = list[midIndex]
+  for lbi <= ubi {
+    mi := (lbi + ubi)/2
+    cVal = list[mi]
 
-    if midValue == x {
-      return midIndex
+    if target == cVal {
+      return mi
     }
 
-    if (x < midValue) {
-      upperIndex = midIndex - 1
+    if (target < cVal) {
+      ubi = mi - 1
     }
 
-    if (x > midValue) {
-      lowerIndex = midIndex + 1
+    if (target > cVal) {
+      lbi = mi + 1
     }
   }
 
@@ -218,10 +213,10 @@ func findIndex(list []int, x int) int {
 
 ## Conclusion
 
-It's great to have you still reading at this point. It suggests that you have gone through the article. Here are a couple of things you may want to try for practice.
+It's great to have you still reading at this point. It implies that you have gone through the article. Here are a couple of things you may want to try for practice.
 
 1. How do you update the algorithm to fit situations where the numbers in the list are in descending order?
 
 2. How do you update the algorithm to fit situations where there are no numbers in the list, but objects such as `person.age` and you have to find the person with a certain age *x*
 
-3. Can you try [Question 278](https://leetcode.com/problems/first-bad-version/description/) on LeetCode?
+3. Can you try [Question 278](https://leetcode.com/problems/first-bad-version/description/) on LeetCode to test your knowledge?
