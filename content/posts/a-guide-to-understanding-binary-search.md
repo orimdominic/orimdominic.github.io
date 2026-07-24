@@ -23,7 +23,8 @@ The binary search algorithm is similar to how you search through a numbered book
 
 Two things stand out:
 1. the page numbers are **sorted** so you can know to search left or search right
-2. the number of pages is **finite** (has a definite end)
+2. one page number does not appear twice - every number is unique
+3. the number of pages is **finite** (has a definite end)
 
 In binary search, you ask the computer to do something similar:
 1. start from a midpoint in the collection
