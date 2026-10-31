@@ -54,6 +54,8 @@ Another serverless function queries the database every minute to retrieve stored
 
 The bot compiles a response text from the result and responds to the requester \0/.
 
+{{< figure caption="@PickAtRandom Twitter Bot" alt="@PickAtRandom Twitter Bot" align=center src="/projects/assets/pick-at-random-twitter-bot.png" >}}
+
 ## Possible Improvements
 
 After @PickAtRandom became functional, I started to see more complex use cases. People wanted to make sure that whoever was selected was a follower and had also interacted in more than one way; for example liked and also retweeted. Some wanted to select people whose retweets or comments had the highest or lowest likes.
@@ -63,6 +65,8 @@ While these are valid, @PickAtRandom wasn't built to solve these types of proble
 Lastly, Twitter responds with only about 99 user handles for requests to get a list of users that liked a tweet or retweeted it. This is because @PickAtRandom is on a free plan. In the light of this, it is better to use @PickAtRandom for selections that would expect less than 99 tweet interactors for an interaction category. This can be achieved using short time frames for new tweets. I hope to upgrade the plan when I have the funds for it.
 
 ## Conclusion
+
+Sadly, [the bot](https://github.com/orimdominic/pick-at-random) is down. It was fun while it lasted.
 
 I have to thank @mykeels here. He was supportive, watching out for tweets from @PickAtRandom and being accessible for questions and feeback. [@bolaji\_](https://twitter.com/bolaji_), the creator of [@anniemusicapp](https://mobile.twitter.com/anniemusicapp) was also cheering me on. They got @PickAtRandom its first set of users. Awesome folks!
 

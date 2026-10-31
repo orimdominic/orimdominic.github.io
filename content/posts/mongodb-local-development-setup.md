@@ -2,7 +2,7 @@
 title: "MongoDB Local Development Setup"
 date: 2026-05-14T01:02:47+01:00
 author: "Orim Dominic Adah"
-description: "How I set up MongoDB for local development"
+description: "How I set up MongoDB in my local development environment for RAG and database transactions"
 draft: false
 showToc: true
 TocOpen: false
@@ -11,6 +11,10 @@ hidemeta: false
 disableShare: false
 searchHidden: false
 tags: ["mongodb", "docker"]
+cover:
+  image: "../posts/images/mongodb-local-development-setup-for-rag-and-transactions.jpeg"
+  alt: "Set up MongoDB in my local development environment for RAG and database transactions"
+  relative: false
 ---
 
 Some of the applications I build use MongoDB. [MongoDB community server](https://www.mongodb.com/try/download/community) is the most common MongoDB server for local development but it is not exactly the same as MongoDB Atlas which is used in production. The community server lacks two features:
@@ -64,6 +68,6 @@ I use `make atlas` to start the local atlas server and I connect to it with the 
 
 > Why didn't you create a three-node replica set with the local atlas server so you have the replica sets and the vector search features in one container?
 
-  I thought you wouldn't ask. It doesn't work. The local atlas server is a single-node replica set server and that cannot be modified (yet).
+  I thought you wouldn't ask. Well, it doesn't work. The local atlas server is a single-node replica set server and that cannot be modified (yet).
 
 Cheers!

@@ -4,7 +4,7 @@ title: "Orim Dominic"
 theme: "PaperMod"
 
 pagination:
-    paperSize: 10
+  paperSize: 10
 
 enableRobotsTXT: true
 buildDrafts: false
@@ -15,99 +15,105 @@ enableEmoji: true # https://www.webfx.com/tools/emoji-cheat-sheet/
 googleAnalytics: G-GL67PJE50H
 
 minify:
-    disableXML: true
-    minifyOutput: true
-    disableJSON: true
+  disableXML: true
+  minifyOutput: true
+  disableJSON: true
 
 params:
-    env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    title: "Orim Dominic"
-    description: "Sharing insights from my experience in software engineering"
-    author: "Orim Dominic Adah"
-    keywords: [javascript, golang, software engineering, programming]
-    images: sudocodes-home-image.png
-    ShowReadingTime: true
-    ShowShareButtons: true
-    ShowCodeCopyButtons: true
-    ShowPostNavLinks: true
-    # comments: false
-    defaultTheme: auto
-    disableThemeToggle: false
-    disableSpecial1stPost: false
-    fuseOpts:
-        isCaseSensitive: false
-        shouldSort: true
-        location: 0
-        distance: 1000
-        threshold: 0.4
-        minMatchCharLength: 0
-        keys: ["title", "permalink", "summary", "content"]
-    cover:
-      responsiveImages: true
-      linkFullImages: true
-      hiddenInList: false
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: "Orim Dominic"
+  description: "Portfolio website of Orim Dominic, Product Engineer and Software Engineer; sharing insights from my experience in software and product engineering"
+  author: "Orim Dominic Adah"
+  keywords: [javascript, golang, software engineering, programming]
+  images: sudocodes-home-image.png
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowCodeCopyButtons: true
+  ShowPostNavLinks: true
+  # comments: false
+  defaultTheme: auto
+  disableThemeToggle: false
+  disableSpecial1stPost: false
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+  cover:
+    responsiveImages: true
+    linkFullImages: true
+    hiddenInList: false
 
-    assets:
-        favicon: "/favicon.ico"
-        favicon16x16:  "/favicon-16x16.png"
-        favicon32x32:  "/favicon-32x32.png"
-        apple_touch_icon: "/apple-touch-icon.png"
-        # safari_pinned_tab: "<link / abs url>"
-        disableFingerprinting: true
-    profileMode:
-        enabled: true # needs to be explicitly set
-        title: Orim Dominic
-        # imageUrl: '/apple-touch-icon.png'
-        imageTitle: 'site image'
-        buttons:
-            - name: Articles
-              url: posts
-            - name: Projects
-              url: projects
-        subtitle: "A repository of my experiences, experiments and musings in software engineering"
- # home-info mode
-    # homeInfoParams:
-    #     Title: "Hi there \U0001F44B"
-    #     Content: Welcome to my blog
+  assets:
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+    # safari_pinned_tab: "<link / abs url>"
+    disableFingerprinting: true
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: Orim Dominic
+    # imageUrl: '/apple-touch-icon.png'
+    imageTitle: "site image"
+    # buttons:
+    #   - name: Articles
+    #     url: posts
+    #   - name: Projects
+    #     url: projects
+    subtitle: "This is repository of my experiences, experiments and musings in software and product engineering"
+  # home-info mode
+  # homeInfoParams:
+  #     Title: "Hi there \U0001F44B"
+  #     Content: Welcome to my blog
 
-    socialIcons:
-        - name: github
-          url: "https://github.com/orimdominic"
-        - name: youtube
-          url: "https://www.youtube.com/@DominicOrim"
-        - name: linkedin
-          url: "https://linkedin.com/in/orimdominicadah"
+  socialIcons:
+    - name: github
+      url: "https://github.com/orimdominic"
+    - name: youtube
+      url: "https://www.youtube.com/@DominicOrim"
+    - name: linkedin
+      url: "https://linkedin.com/in/orimdominicadah"
 
-    # fuseOpts:
-    #     isCaseSensitive: false
-    #     shouldSort: true
-    #     location: 0
-    #     distance: 1000
-    #     threshold: 0.4
-    #     minMatchCharLength: 0
-    #     keys: ["title", "permalink", "summary", "content"]
+  # fuseOpts:
+  #     isCaseSensitive: false
+  #     shouldSort: true
+  #     location: 0
+  #     distance: 1000
+  #     threshold: 0.4
+  #     minMatchCharLength: 0
+  #     keys: ["title", "permalink", "summary", "content"]
 
-author:
-    name = "Orim Dominic"
-    email = "orim@email.com"
+author: name = "Orim Dominic"
+  email = "orim@email.com"
 
 outputs:
-    home:
-        - HTML
-        - RSS
-        - JSON # is necessary
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
 
 menu:
-    main:
-        - identifier: search
-          name: search
-          url: /search/
-          weight: 1
-        - identifier: about
-          name: about
-          url: /about/
-          weight: 2
+  main:
+    - identifier: articles
+      name: Articles
+      url: /posts/
+      weight: 1
+    - identifier: work
+      name: Work
+      url: /projects/
+      weight: 2
+    - identifier: Talks
+      name: Talks
+      url: /talks/
+      weight: 3
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 4
 
 caches:
-    caches.images:
-        dir = ':cacheDir/images'
+  caches.images: dir = ':cacheDir/images'

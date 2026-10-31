@@ -17,15 +17,18 @@ searchHidden: false
 #     relative: false
 comments: false
 ---
+{{< figure caption="A conversation on Slack with a colleague appreciating my work" alt="A conversation on Slack with a colleague appreciating my work" align=center src="../posts/images/leadership-values.png" >}}
 
-Hi! I'm Orim Dominic, software engineer and a technical writer and [here's my resume](https://docs.google.com/document/d/1AwkpNSQv6IpQNcSTG362dQ32JbD_woFRHYwClzs0-u0/edit?usp=sharing).
+TL;DR
+[here's my resume](https://docs.google.com/document/d/1AwkpNSQv6IpQNcSTG362dQ32JbD_woFRHYwClzs0-u0/edit?usp=sharing).
+
+Hi! I'm Orim Dominic, software engineer, product engineer and a technical writer. What does that even mean?
 
 
-{{< figure caption="A Slack conversation with a colleague appreciating my work" align=center src="../posts/images/leadership-values.png" >}}
 
 ## Career
 
-My career in professional web development started in 2021 as a backend developer and I have grown over the years to become a full-stack developer with JavaScript and Golang.
+My professional career in software development started in 2021 as a backend developer.
 
 Aside from what I do at work, I
 - mentor ([on Exercism](https://exercism.org/profiles/orimdominic))

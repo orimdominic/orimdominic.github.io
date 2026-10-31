@@ -2,7 +2,7 @@
 title: "Push Notifications in Go: Notify Users After Long RAG Processing"
 date: 2026-05-22T18:12:51+01:00
 author: "Orim Dominic Adah"
-description: "A demo project in which I use push notifications in Go to notify a client after their document embedding process is completed"
+description: "A experiment in which I use push notifications in Go to notify a client after their document embedding process is completed"
 draft: false
 showToc: true
 TocOpen: false
@@ -36,7 +36,7 @@ I sketched a solution and after considering the different client-server communic
 
 I responded with my solution, but I felt that it wasn't enough. *Ideas are useless, execution is everything.* (Scott Adams)
 
-I decided to implement my solution to see if what I designed actually works and that's how [sally](https://github.com/orimdominic/sally) was born. sally is a full-stack RAG application (without an LLM) built with:
+I decided to implement my solution to see if what I designed actually works and that's how [sally](https://github.com/orimdominic/sally) was born. **sally** is a full-stack RAG application (without an LLM) built with:
 
 - Go
 - Node.js
@@ -80,6 +80,6 @@ I didn't save the subscription identity of the frontend on the server. In a prod
 
 While push notifications work, for durable notification messages, you should use emails.
 
-You can give sally a run. The instructions for setting her up are in the README. As long as you have Docker, Go and Node.js, you're good to go.
+You can give **sally** a run. The instructions for setting her up are in the README. As long as you have Docker, Go and Node.js, you're good to go.
 
 Cheers!
